@@ -4,7 +4,9 @@ set -e
 CWD=$(pwd)
 OPT="/opt"
 
-BASE_PKGS="gawk make git arduino-core curl"
+export USER="${USER:`whoami`}"
+
+BASE_PKGS="gawk make git arduino-core curl wget"
 SITL_PKGS="g++ python-pip python-matplotlib python-serial python-wxgtk2.8 python-scipy python-opencv python-numpy python-pyparsing ccache realpath"
 PYTHON_PKGS="pymavlink MAVProxy droneapi catkin_pkg"
 PX4_PKGS="python-serial python-argparse openocd flex bison libncurses5-dev \
